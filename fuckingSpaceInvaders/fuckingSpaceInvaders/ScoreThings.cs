@@ -126,7 +126,6 @@ namespace fuckingSpaceInvaders
             string val = "";
             int cnt = 0;
             var myList = SortedList();
-            //Code adapted from https://stackoverflow.com/questions/289/how-do-you-sort-a-dictionary-by-value
             for(int i = 0; i < myList.Count(); i++)
             {
                 if (cnt == 10) break;
@@ -139,6 +138,7 @@ namespace fuckingSpaceInvaders
         //Returns the sorted values from Profiles.  These values will be used to show the top 10 profiles (based on score)
         public List<KeyValuePair<string, int>> SortedList()
         {
+            //Code adapted from https://stackoverflow.com/questions/289/how-do-you-sort-a-dictionary-by-value
             int c = Profiles.Count();
             List<KeyValuePair<string,int>> myList = Profiles.ToList();
             for(int inner = 0; inner < c; inner++)
