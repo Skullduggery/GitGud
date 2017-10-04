@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace fuckingSpaceInvaders
 {
-    class Enemies
+    
+    class Enemy:Tank //it might not inherit, don't know yet... 
     {
+        
     }
 }

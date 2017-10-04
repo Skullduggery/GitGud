@@ -59,7 +59,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Bullet.cs" />
-    <Compile Include="Enemies.cs" />
+    <Compile Include="Enemy.cs" />
     <Compile Include="ScoreThings.cs" />
     <Compile Include="Tank.cs" />
     <Page Include="MainWindow.xaml">

@@ -36,6 +36,7 @@ namespace fuckingSpaceInvaders
         //tank things here
         Turtle tracer;
         //Stuff for the map here
+        //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Stapleton add the bitmap images here$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
         //BitmapImage day = new BitmapImage(new Uri(""));
         //BitmapImage dusk = new BitmapImage(new Uri(""));
         //BitmapImage night = new BitmapImage(new Uri(""));
@@ -51,9 +52,10 @@ namespace fuckingSpaceInvaders
             //Jesus please find the exact location of the barrel of the gun and keep it there. 
             //tracer must update to location of barrel of turret when user fires
             tracer.LineBrush = Brushes.DarkRed;
-            profiles.LoadScores("..\\..\\..\\Profiles.txt");//@Debug
+            profiles.LoadScores();//@Debug
             MessageBox.Show(profiles.ShowHighScores());//@Debug
-            profiles.WriteTings("..\\..\\..\\Profiles.txt");//@Debug
+            profiles.WriteTings();//@Debug
+
   
         }
 

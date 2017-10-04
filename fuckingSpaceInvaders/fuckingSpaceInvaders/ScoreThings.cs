@@ -10,13 +10,26 @@ namespace fuckingSpaceInvaders
 {
     class ScoreThings
     {
+        private string path = "..\\..\\..\\Profiles.txt";
+        //Make an icon for the main window (window that shows when you click "Start" -- ya stupid bitch)
         public Dictionary<string, int> Profiles = new Dictionary<string, int>();
         public string Username { get; private set; }
-        public int Score { get; private set; }
+        public int Score { get; set; } //need a way to increase this score...
 
         public ScoreThings()
         {
-            //this is an empty constructor
+            //this is an empty constructor, duh...
+        }
+
+        //Adjusts the score in the profile if the user 
+        public void updateScore()
+        {
+            int profileScore = Profiles[Username];
+            if (Score > profileScore)
+            {
+                Profiles[Username] = Score;
+                WriteTings();
+            }
         }
 
         //Used to check if current username is already in the list of profiles 
@@ -41,10 +54,11 @@ namespace fuckingSpaceInvaders
             if (!checkProfiles(usr))
             {
                 Profiles[usr] = 0;
+                WriteTings();
             }
         }
 
-        public void WriteTings(string path)
+        public void WriteTings()
         {
             StreamWriter sw = null;
             try
@@ -65,7 +79,7 @@ namespace fuckingSpaceInvaders
             }
         }
 
-        public void LoadScores(string path)
+        public void LoadScores()
         {
             StreamReader sr = null;
             try
@@ -106,6 +120,23 @@ namespace fuckingSpaceInvaders
                 cnt++;
             }
             return val;
+        }
+
+        public void Sort()
+        {
+            int c = Profiles.Count();
+            for(int inner = 0; inner < c; inner++)
+            {
+                for(int outer = inner + 1; outer < c; outer++)
+                {
+
+                }//outer
+            }//inner
+        }
+
+        void swap(int a,int b)
+        {
+
         }
     }
 }
