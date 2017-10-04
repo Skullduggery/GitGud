@@ -1,0 +1,16 @@
+C:\Users\Matthew\Desktop\fuckingSpaceInvaders\fuckingSpaceInvaders\bin\Debug\fuckingSpaceInvaders.exe.config
+C:\Users\Matthew\Desktop\fuckingSpaceInvaders\fuckingSpaceInvaders\bin\Debug\fuckingSpaceInvaders.exe
+C:\Users\Matthew\Desktop\fuckingSpaceInvaders\fuckingSpaceInvaders\bin\Debug\fuckingSpaceInvaders.pdb
+C:\Users\Matthew\Desktop\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.csprojResolveAssemblyReference.cache
+C:\Users\Matthew\Desktop\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\MainWindow.g.cs
+C:\Users\Matthew\Desktop\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\App.g.cs
+C:\Users\Matthew\Desktop\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders_MarkupCompile.cache
+C:\Users\Matthew\Desktop\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders_MarkupCompile.lref
+C:\Users\Matthew\Desktop\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\MainWindow.baml
+C:\Users\Matthew\Desktop\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.g.resources
+C:\Users\Matthew\Desktop\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.Properties.Resources.resources
+C:\Users\Matthew\Desktop\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.csproj.GenerateResource.Cache
+C:\Users\Matthew\Desktop\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.exe
+C:\Users\Matthew\Desktop\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.pdb
+C:\Users\Matthew\Desktop\fuckingSpaceInvaders\fuckingSpaceInvaders\bin\Debug\ThinkLib.dll
+C:\Users\Matthew\Desktop\fuckingSpaceInvaders\fuckingSpaceInvaders\bin\Debug\ThinkLib.xml
