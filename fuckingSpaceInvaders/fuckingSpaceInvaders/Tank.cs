@@ -9,5 +9,10 @@ namespace fuckingSpaceInvaders
     class Tank
     {
         public int Lives { get; private set; }
+        
+        public Tank()
+        {
+
+        }
     }
 }

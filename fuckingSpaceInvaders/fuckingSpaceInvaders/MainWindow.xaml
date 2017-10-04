@@ -6,11 +6,13 @@
         xmlns:local="clr-namespace:fuckingSpaceInvaders"
         mc:Ignorable="d"
         Title="TANKS" Height="400" Width="800"
-        Closing="Window_Closing">
+        Closing="Window_Closing"
+        ResizeMode="NoResize">
 
     <Grid>
         <Canvas x:Name="DeathDestructionBattlegroundDoom" Margin="10">
             <Image x:Name="tankThing" Height="100" Canvas.Left="30" Canvas.Top="194" Width="100"/>
+            <Image x:Name="Background" Height="349" Width="772"/>
             <Image x:Name="shootingThing" Height="100" Canvas.Left="30" Canvas.Top="194" Width="100"/>
         </Canvas>
 

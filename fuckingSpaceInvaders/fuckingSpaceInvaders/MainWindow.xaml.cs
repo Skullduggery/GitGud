@@ -37,9 +37,13 @@ namespace fuckingSpaceInvaders
         Turtle tracer;
         //Stuff for the map here
         //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Stapleton add the bitmap images here$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-        //BitmapImage day = new BitmapImage(new Uri(""));
-        //BitmapImage dusk = new BitmapImage(new Uri(""));
-        //BitmapImage night = new BitmapImage(new Uri(""));
+        BitmapImage[] environment = new BitmapImage[]
+        {
+            new BitmapImage(new Uri("pack://application:,,,/1.png")),
+            new BitmapImage(new Uri("pack://application:,,,/2.png")),
+            new BitmapImage(new Uri("pack://application:,,,/3.png"))
+        };
+        int current = 0;
         DispatcherTimer time = new DispatcherTimer();
         //score things here
         ScoreThings profiles = new ScoreThings();
@@ -52,11 +56,39 @@ namespace fuckingSpaceInvaders
             //Jesus please find the exact location of the barrel of the gun and keep it there. 
             //tracer must update to location of barrel of turret when user fires
             tracer.LineBrush = Brushes.DarkRed;
-            profiles.LoadScores();//@Debug
-            MessageBox.Show(profiles.ShowHighScores());//@Debug
-            profiles.WriteTings();//@Debug
+            profiles.LoadProfiles();
+            time.Tick += Time_Tick;
+            Background.Source = environment[0];
+            time.Interval = TimeSpan.FromMinutes(1);//Might change this to be based on number of turns taken as opposed to time taken
+            time.IsEnabled = true;
+            debugsHere();
 
-  
+        }
+
+        private void debugsHere()
+        {
+            time.Interval = TimeSpan.FromSeconds(5);
+            //MessageBox.Show(profiles.ShowHighScores());//@Debug
+            //profiles.addUser("Will");//@debug
+            //profiles.addUser("newPerson");
+            //profiles.Score = 100;
+            //profiles.updateScore();
+            //profiles.Score = 100;//@debug
+            //profiles.updateScore();//@debug
+            //MessageBox.Show(profiles.ShowHighScores());//@debug
+        }
+
+        private void Time_Tick(object sender, EventArgs e)
+        {
+            if (current + 1 < environment.Length)
+            {
+                current++;
+            }
+            else
+            {
+                current = 0;
+            }
+            Background.Source = environment[current];
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
