@@ -36,6 +36,8 @@ namespace fuckingSpaceInvaders
         //tank things here
         Turtle tracer;
         Turtle enemyTracer;
+        bool ourTurn = true;    //We go first  
+        DispatcherTimer attacking = new DispatcherTimer();
         //Stuff for the map here
         BitmapImage[] environment = new BitmapImage[]
         {
@@ -57,8 +59,29 @@ namespace fuckingSpaceInvaders
             time.Tick += Time_Tick;
             DeathDestructionBattlegroundDoom.Background = new ImageBrush(environment[0]);//Sets the background to be the morning image (1.png)
             time.Interval = TimeSpan.FromMinutes(1);//Might change this to be based on number of turns taken as opposed to time taken
+            //If we use a turn counter instead, we can do a check to make sure that it is an odd number (our) turn our an even number (enemy's turn)
             time.IsEnabled = true;
+            attacking.Interval = TimeSpan.FromMinutes(1);
+            attacking.Tick += Attacking_Tick;
+            attacking.IsEnabled = true;
             debugsHere();           //@D.E.B.U.G
+        }
+
+        //The idea is that the timer will check every minute whether it is the enemy's turn
+        //If it is the enemy's turn, they will attack us.
+        private void Attacking_Tick(object sender, EventArgs e)
+        {
+            if (!ourTurn)
+            {
+                /**-------------------------------IDEAS-------------------------------------------
+                 * Do things here [will have to implement enemy class/system before I can do this]
+                 * enemyTracer will be used to track the enemy's attacks on us
+                 * If the enemyTracer turtle touches our tank, reduce our lives by 1
+                 * If this reduces our live count to 0 or -1 (depending if we count from 0 or 1)
+                 * then gameover, update the user's score (if required), and then show 
+                 * the highscores
+                 */
+            }
         }
 
         //This method is used to initialize the turtles as well as set the colour of their brushes and hide them
@@ -105,6 +128,13 @@ namespace fuckingSpaceInvaders
 
             //Make this message box look FABULOUS
             //Nice icon and stuff too
+            /*
+             * Can have a save feature whereby if the user quits while playing, they can resume where the left off
+             * will probably not have time to do this, but it is an idea
+             * if we do implememt this it will be a limited feature 
+             * (working only for the last person that quit midway through a game) 
+             */
+            profiles.updateScore();
             MessageBox.Show("Tanks for playing");//<--  
         }
     }

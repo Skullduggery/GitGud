@@ -11,7 +11,7 @@ namespace fuckingSpaceInvaders
     class ScoreThings
     {
         private string path = "..\\..\\..\\Profiles.txt";
-        //Make an icon for the main window (window that shows when you click "Start" -- ya stupid bitch)
+        //Make an icon for the main window (window that shows when you click "Start")
         public Dictionary<string, int> Profiles = new Dictionary<string, int>();
         public string Username { get; private set; }
         public int Score { get; set; } //need a way to increase thiscore...
@@ -85,8 +85,10 @@ namespace fuckingSpaceInvaders
             }
             catch(IOException ex)
             {
-                //make more specific catches
-            }finally
+                //make more specific catches/messages
+                MessageBox.Show("An IO error occured\n\n" + ex.ToString());
+            }
+            finally
             {
                 sw.Close();
             }
@@ -114,6 +116,7 @@ namespace fuckingSpaceInvaders
             catch (IOException ex)
             {
                 //show specific error message here
+                MessageBox.Show("An IO error occured\n\n" + ex.ToString());
             }finally
             {
                 sr.Close();
