@@ -14,7 +14,7 @@ namespace fuckingSpaceInvaders
         //Make an icon for the main window (window that shows when you click "Start" -- ya stupid bitch)
         public Dictionary<string, int> Profiles = new Dictionary<string, int>();
         public string Username { get; private set; }
-        public int Score { get; set; } //need a way to increase this score...
+        public int Score { get; set; } //need a way to increase thiscore...
 
         public ScoreThings()
         {

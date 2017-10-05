@@ -35,8 +35,8 @@ namespace fuckingSpaceInvaders
 
         //tank things here
         Turtle tracer;
+        Turtle enemyTracer;
         //Stuff for the map here
-        //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Stapleton add the bitmap images here$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
         BitmapImage[] environment = new BitmapImage[]
         {
             new BitmapImage(new Uri("pack://application:,,,/1.png")),
@@ -47,25 +47,30 @@ namespace fuckingSpaceInvaders
         DispatcherTimer time = new DispatcherTimer();
         //score things here
         ScoreThings profiles = new ScoreThings();
-        
         public MainWindow()
         {
             InitializeComponent();
-            tracer = new Turtle(DeathDestructionBattlegroundDoom);
-            tracer.Visible = false;
+            tracer = initTurtle(tracer);
+            enemyTracer = initTurtle(enemyTracer);
             //Jesus please find the exact location of the barrel of the gun and keep it there. 
-            //tracer must update to location of barrel of turret when user fires
-            tracer.LineBrush = Brushes.DarkRed;
             profiles.LoadProfiles();
             time.Tick += Time_Tick;
-            Background.Source = environment[0];
+            DeathDestructionBattlegroundDoom.Background = new ImageBrush(environment[0]);//Sets the background to be the morning image (1.png)
             time.Interval = TimeSpan.FromMinutes(1);//Might change this to be based on number of turns taken as opposed to time taken
             time.IsEnabled = true;
-            debugsHere();
-
+            debugsHere();           //@D.E.B.U.G
         }
 
-        private void debugsHere()
+        //This method is used to initialize the turtles as well as set the colour of their brushes and hide them
+        private Turtle initTurtle(Turtle x)
+        {
+            x = new Turtle(DeathDestructionBattlegroundDoom);
+            x.Visible = false;
+            x.LineBrush = Brushes.Red;
+            return x;
+        }
+
+        private void debugsHere()//Some debugging stuff here
         {
             time.Interval = TimeSpan.FromSeconds(5);
             //MessageBox.Show(profiles.ShowHighScores());//@Debug
@@ -78,6 +83,7 @@ namespace fuckingSpaceInvaders
             //MessageBox.Show(profiles.ShowHighScores());//@debug
         }
 
+        //This will change the picture so that our game has a day/night system
         private void Time_Tick(object sender, EventArgs e)
         {
             if (current + 1 < environment.Length)
@@ -88,16 +94,18 @@ namespace fuckingSpaceInvaders
             {
                 current = 0;
             }
-            Background.Source = environment[current];
+            DeathDestructionBattlegroundDoom.Background = new ImageBrush(environment[current]);
         }
 
+
+        //Our punful message that displays when the user exits the game
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$STAPLETON DO THIS$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
             //Make this message box look FABULOUS
             //Nice icon and stuff too
-            MessageBox.Show("Tanks for playing");//<-- 
+            MessageBox.Show("Tanks for playing");//<--  
         }
     }
 }
