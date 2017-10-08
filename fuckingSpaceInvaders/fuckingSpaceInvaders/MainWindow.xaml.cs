@@ -43,9 +43,10 @@ namespace fuckingSpaceInvaders
         DispatcherTimer time = new DispatcherTimer();
         //score things here
         ScoreThings profiles = new ScoreThings();
-        
+        bool Hit;
         public MainWindow()
         {
+            
             InitializeComponent();
             tracer = new Turtle(DeathDestructionBattlegroundDoom);
             tracer.Visible = false;
@@ -66,6 +67,21 @@ namespace fuckingSpaceInvaders
             //Make this message box look FABULOUS
             //Nice icon and stuff too
             MessageBox.Show("Tanks for playing");//<-- 
+        }
+
+        private void slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            
+          //TurretUpdate used to be here I Broke it :(
+        }
+
+        private void FireBtn_Click(object sender, RoutedEventArgs e)
+        {
+            //BulletUpdate goes here
+            if (tracer.Position.X > (Canvas.GetTop(tankThing)) && tracer.Position.Y > Canvas.GetLeft(tankThing)) 
+            {
+                Hit = true;
+            }
         }
     }
 }
