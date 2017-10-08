@@ -11,10 +11,10 @@ namespace fuckingSpaceInvaders
     class ScoreThings
     {
         private string path = "..\\..\\..\\Profiles.txt";
-        //Make an icon for the main window (window that shows when you click "Start" -- ya stupid bitch)
+        //Make an icon for the main window (window that shows when you click "Start")
         public Dictionary<string, int> Profiles = new Dictionary<string, int>();
         public string Username { get; private set; }
-        public int Score { get; set; } //need a way to increase this score...
+        public int Score { get; set; } //need a way to increase thiscore...
 
         public ScoreThings()
         {
@@ -51,13 +51,26 @@ namespace fuckingSpaceInvaders
         //Used to add user to profile if they do not exist already
         public void addUser(string usr)
         {
+            //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Stapleton$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+            //Have a messageBox that returns a boolean [assign this to the Answer variable
+            //This messageBox will read:  "This username already exists, would you like to use it"
+            //Give the user a "yes" (true) and a "no" (false) option
+            bool answer = false;
+            if (checkProfiles(usr) && !answer)
+            {
+                //if user already exists, but the answer to the messageBox quistion is "no" then ask them to enter a new username
+            }
+
             if (!checkProfiles(usr))
             {
                 Profiles[usr] = 0;
+                Username = usr;
+                Score = 0;
                 WriteTings();
             }
         }
 
+        //Writes changes to the scoreboard to file
         public void WriteTings()
         {
             StreamWriter sw = null;
@@ -72,14 +85,17 @@ namespace fuckingSpaceInvaders
             }
             catch(IOException ex)
             {
-                //make more specific catches
-            }finally
+                //make more specific catches/messages
+                MessageBox.Show("An IO error occured\n\n" + ex.ToString());
+            }
+            finally
             {
                 sw.Close();
             }
         }
 
-        public void LoadScores()
+        //Loads all the data from the profiles (to keep track of everyone's score)
+        public void LoadProfiles()
         {
             StreamReader sr = null;
             try
@@ -100,43 +116,47 @@ namespace fuckingSpaceInvaders
             catch (IOException ex)
             {
                 //show specific error message here
+                MessageBox.Show("An IO error occured\n\n" + ex.ToString());
             }finally
             {
                 sr.Close();
             }
         }
 
+        //Shows the top 10 scores (uses the SortedList method)
         public string ShowHighScores()
         {
-            //Sort();    //need to make a sort method to sort the profiles
             string val = "";
             int cnt = 0;
-            foreach(string x in Profiles.Keys)
+            var myList = SortedList();
+            for(int i = 0; i < myList.Count(); i++)
             {
                 if (cnt == 10) break;
-                //format this nicely so that scores are in a nice neat column
-                //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Stapleton, do that column neatness thing here$$$$$$$$$$$$$$$$$$$$$$$$$
-                val += $"{cnt + 1}. {x}\t-\t{Profiles[x]}\n";
+                val += $"{cnt + 1}. {myList[i].Key}\t-\t{myList[i].Value}\n";
                 cnt++;
             }
             return val;
         }
 
-        public void Sort()
+        //Returns the sorted values from Profiles.  These values will be used to show the top 10 profiles (based on score)
+        public List<KeyValuePair<string, int>> SortedList()
         {
+            //Code adapted from https://stackoverflow.com/questions/289/how-do-you-sort-a-dictionary-by-value
             int c = Profiles.Count();
+            List<KeyValuePair<string,int>> myList = Profiles.ToList();
             for(int inner = 0; inner < c; inner++)
             {
                 for(int outer = inner + 1; outer < c; outer++)
                 {
-
-                }//outer
-            }//inner
-        }
-
-        void swap(int a,int b)
-        {
-
+                    if (myList.ElementAt(inner).Value < myList.ElementAt(outer).Value)//compares the values based on scores
+                    {
+                        var a = myList[inner];
+                        myList[inner] = myList[outer];
+                        myList[outer] = a;
+                    }
+                }//for [outer]
+            }//for [inner]
+            return myList;
         }
     }
 }
