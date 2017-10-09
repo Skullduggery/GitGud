@@ -29,6 +29,23 @@ I:\GIT\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\MainWindow.bam
 I:\GIT\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.g.resources
 I:\GIT\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.Properties.Resources.resources
 I:\GIT\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.csproj.GenerateResource.Cache
+<<<<<<< HEAD
+C:\Users\Timothy\Desktop\git\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\bin\Debug\fuckingSpaceInvaders.exe.config
+C:\Users\Timothy\Desktop\git\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.exe
+C:\Users\Timothy\Desktop\git\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.pdb
+C:\Users\Timothy\Desktop\git\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\bin\Debug\fuckingSpaceInvaders.exe
+C:\Users\Timothy\Desktop\git\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\bin\Debug\fuckingSpaceInvaders.pdb
+C:\Users\Timothy\Desktop\git\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\bin\Debug\ThinkLib.xml
+C:\Users\Timothy\Desktop\git\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.csprojResolveAssemblyReference.cache
+C:\Users\Timothy\Desktop\git\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\MainWindow.g.cs
+C:\Users\Timothy\Desktop\git\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\App.g.cs
+C:\Users\Timothy\Desktop\git\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders_MarkupCompile.cache
+C:\Users\Timothy\Desktop\git\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders_MarkupCompile.lref
+C:\Users\Timothy\Desktop\git\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\MainWindow.baml
+C:\Users\Timothy\Desktop\git\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.g.resources
+C:\Users\Timothy\Desktop\git\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.Properties.Resources.resources
+C:\Users\Timothy\Desktop\git\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.csproj.GenerateResource.Cache
+=======
 C:\Users\Matthew\Desktop\GIT\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\bin\Debug\fuckingSpaceInvaders.exe.config
 C:\Users\Matthew\Desktop\GIT\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.exe
 C:\Users\Matthew\Desktop\GIT\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.pdb
@@ -44,3 +61,4 @@ C:\Users\Matthew\Desktop\GIT\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\ob
 C:\Users\Matthew\Desktop\GIT\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.g.resources
 C:\Users\Matthew\Desktop\GIT\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.Properties.Resources.resources
 C:\Users\Matthew\Desktop\GIT\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.csproj.GenerateResource.Cache
+>>>>>>> c7f38ee054f166b29a35b85f8aec5c4f1bafc266

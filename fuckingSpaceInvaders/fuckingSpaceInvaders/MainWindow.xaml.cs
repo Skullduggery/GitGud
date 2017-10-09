@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -49,8 +49,10 @@ namespace fuckingSpaceInvaders
         DispatcherTimer time = new DispatcherTimer();
         //score things here
         ScoreThings profiles = new ScoreThings();
+        bool Hit;
         public MainWindow()
         {
+            
             InitializeComponent();
             tracer = initTurtle(tracer);
             enemyTracer = initTurtle(enemyTracer);
@@ -96,7 +98,7 @@ namespace fuckingSpaceInvaders
         private void debugsHere()//Some debugging stuff here
         {
             time.Interval = TimeSpan.FromSeconds(5);
-            MessageBox.Show(profiles.ShowHighScores());//@Debug
+            //MessageBox.Show(profiles.ShowHighScores());//@Debug
             //profiles.addUser("Will");//@debug
             //profiles.addUser("newPerson");
             //profiles.Score = 100;
@@ -135,6 +137,23 @@ namespace fuckingSpaceInvaders
              * (working only for the last person that quit midway through a game) 
              */
             profiles.updateScore();
+            MessageBox.Show("Tanks for playing");//<--  
+        }
+
+        private void slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            
+          //TurretUpdate used to be here I Broke it :(
+          //Fix it :D
+        }
+
+        private void FireBtn_Click(object sender, RoutedEventArgs e)
+        {
+            //BulletUpdate goes here
+            if (tracer.Position.X > (Canvas.GetTop(tankThing)) && tracer.Position.Y > Canvas.GetLeft(tankThing)) 
+            {
+                Hit = true;
+            }
         }
     }
 }
