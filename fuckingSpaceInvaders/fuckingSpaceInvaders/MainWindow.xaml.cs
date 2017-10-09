@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -50,8 +50,10 @@ namespace fuckingSpaceInvaders
         DispatcherTimer time = new DispatcherTimer();
         //score things here
         ScoreThings profiles = new ScoreThings();
+        bool Hit;
         public MainWindow()
         {
+            
             InitializeComponent();
             tracer = initTurtle(tracer);
             enemyTracer = initTurtle(enemyTracer);
@@ -145,6 +147,22 @@ namespace fuckingSpaceInvaders
             custom.Show();
             
            
+        }
+
+        private void slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            
+          //TurretUpdate used to be here I Broke it :(
+          //Fix it :D
+        }
+
+        private void FireBtn_Click(object sender, RoutedEventArgs e)
+        {
+            //BulletUpdate goes here
+            if (tracer.Position.X > (Canvas.GetTop(tankThing)) && tracer.Position.Y > Canvas.GetLeft(tankThing)) 
+            {
+                Hit = true;
+            }
         }
     }
 }
