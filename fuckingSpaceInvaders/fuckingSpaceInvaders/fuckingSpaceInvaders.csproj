@@ -59,9 +59,16 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Bullet.cs" />
+    <Compile Include="CustomMessage.xaml.cs">
+      <DependentUpon>CustomMessage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Enemy.cs" />
     <Compile Include="ScoreThings.cs" />
     <Compile Include="Tank.cs" />
+    <Page Include="CustomMessage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

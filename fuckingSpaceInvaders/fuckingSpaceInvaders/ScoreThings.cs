@@ -15,6 +15,7 @@ namespace fuckingSpaceInvaders
         public Dictionary<string, int> Profiles = new Dictionary<string, int>();
         public string Username { get; private set; }
         public int Score { get; set; } //need a way to increase thiscore...
+        public bool answer = false;
 
         public ScoreThings()
         {
@@ -22,7 +23,7 @@ namespace fuckingSpaceInvaders
         }
 
         //Adjusts the score in the profile if the user 
-        public void updateScore()
+      /*  public void updateScore()
         {
             int profileScore = Profiles[Username];
             if (Score > profileScore)
@@ -30,7 +31,7 @@ namespace fuckingSpaceInvaders
                 Profiles[Username] = Score;
                 WriteTings();
             }
-        }
+        }*/
 
         //Used to check if current username is already in the list of profiles 
         public bool checkProfiles(string usr)
@@ -55,10 +56,24 @@ namespace fuckingSpaceInvaders
             //Have a messageBox that returns a boolean [assign this to the Answer variable
             //This messageBox will read:  "This username already exists, would you like to use it"
             //Give the user a "yes" (true) and a "no" (false) option
-            bool answer = false;
+          
+            CustomMessage custom = new CustomMessage();
+            
+            custom.txtInputOutput.Visibility = Visibility.Hidden;
+            custom.btnSave.Content = "Yes";
+            custom.btnClose.Content = "No";
+            custom.Show();
+            
+           
             if (checkProfiles(usr) && !answer)
             {
                 //if user already exists, but the answer to the messageBox quistion is "no" then ask them to enter a new username
+                custom.btnSave.Content = "Add";
+                
+                custom.Show();
+                Username = custom.txtReturn.Text;
+               
+                
             }
 
             if (!checkProfiles(usr))

@@ -36,7 +36,8 @@ namespace fuckingSpaceInvaders
         //tank things here
         Turtle tracer;
         Turtle enemyTracer;
-        bool ourTurn = true;    //We go first  
+        bool ourTurn = true;    //We go first
+        CustomMessage custom = new CustomMessage();
         DispatcherTimer attacking = new DispatcherTimer();
         //Stuff for the map here
         BitmapImage[] environment = new BitmapImage[]
@@ -134,8 +135,16 @@ namespace fuckingSpaceInvaders
              * if we do implememt this it will be a limited feature 
              * (working only for the last person that quit midway through a game) 
              */
-            profiles.updateScore();
-            MessageBox.Show("Tanks for playing");//<--  
+            //profiles.updateScore();
+            //MessageBox.Show("Tanks for playing");//<-- 
+            custom.txtReturn.Visibility = Visibility.Hidden;
+            //custom.txtInputOutput.Visibility = Visibility.Hidden;
+            //custom.btnSave.Visibility = Visibility.Hidden;
+            custom.txtInputOutput.Text = "Thanks for playing\nWould you like to save your game?";
+            custom.setter(true);
+            custom.Show();
+            
+           
         }
     }
 }
