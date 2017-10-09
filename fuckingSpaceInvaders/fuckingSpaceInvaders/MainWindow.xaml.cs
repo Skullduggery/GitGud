@@ -96,7 +96,7 @@ namespace fuckingSpaceInvaders
         private void debugsHere()//Some debugging stuff here
         {
             time.Interval = TimeSpan.FromSeconds(5);
-            //MessageBox.Show(profiles.ShowHighScores());//@Debug
+            MessageBox.Show(profiles.ShowHighScores());//@Debug
             //profiles.addUser("Will");//@debug
             //profiles.addUser("newPerson");
             //profiles.Score = 100;
@@ -135,7 +135,6 @@ namespace fuckingSpaceInvaders
              * (working only for the last person that quit midway through a game) 
              */
             profiles.updateScore();
-            MessageBox.Show("Tanks for playing");//<--  
         }
     }
 }

@@ -10,14 +10,14 @@ namespace fuckingSpaceInvaders
 {
     class ScoreThings
     {
-        private string path = "..\\..\\..\\Profiles.txt";
+        private string path = "..\\..\\..\\Profiles.csv";
         //Make an icon for the main window (window that shows when you click "Start")
         public Dictionary<string, int> Profiles = new Dictionary<string, int>();
         public string Username { get; private set; }
         public int Score { get; set; } //need a way to increase thiscore...
 
         public ScoreThings()
-        {
+        {        
             //this is an empty constructor, duh...
         }
 
