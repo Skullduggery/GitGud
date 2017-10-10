@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:fuckingSpaceInvaders"
         mc:Ignorable="d"
         Title="TANKS" Height="484.01" Width="800"
+        Icon="PaintTank.png"
         Closing="Window_Closing">
 
     <Grid>

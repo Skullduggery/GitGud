@@ -149,7 +149,10 @@ namespace fuckingSpaceInvaders
                 if (cnt == 10) break;
                 val += $"{cnt + 1}. {myList[i].Key}\t-\t{myList[i].Value}\n";
                 cnt++;
+                MessageBox.Show(val);
             }
+
+           
             return val;
         }
 

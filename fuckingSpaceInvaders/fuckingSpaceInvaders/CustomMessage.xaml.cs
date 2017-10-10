@@ -36,9 +36,9 @@ namespace fuckingSpaceInvaders
             if (closing)
                 Application.Current.Shutdown();
 
-            if (btnClose.Content == "No")
+          /*  if (btnClose.Content == "No")
                 score.answer = false;
-            
+            */
             
 
 
@@ -55,17 +55,19 @@ namespace fuckingSpaceInvaders
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
             ScoreThings score = new ScoreThings();
-            string name = txtReturn.Text;
-            if (name == null)
-            {
-                MessageBox.Show("Please enter a name that is valid");
-                txtReturn.Text = "Enter name here";
-            }
-            else
-            {
-                add(name);
-                score.answer = true;
-            }
+            //string name = txtReturn.Text;
+            //if (name == null)
+            //{
+            //    MessageBox.Show("Please enter a name that is valid");
+            //    txtReturn.Text = "Enter name here";
+            //}
+            //else
+            //{
+            //    add(name);
+            //    score.answer = true;
+            //}
+
+            score.ShowHighScores();
         }
 
         public void add(string name)

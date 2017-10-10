@@ -18,9 +18,7 @@ using System.IO;
 
 namespace fuckingSpaceInvaders
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+    
     public partial class MainWindow : Window
     {
         /*
@@ -40,6 +38,7 @@ namespace fuckingSpaceInvaders
         CustomMessage custom = new CustomMessage();
         DispatcherTimer attacking = new DispatcherTimer();
         //Stuff for the map here
+        BitmapImage TempIcon = new BitmapImage(new Uri("pack://application:,,,/PaintTank.png"));
         BitmapImage[] environment = new BitmapImage[]
         {
             new BitmapImage(new Uri("pack://application:,,,/1.png")),
