@@ -59,7 +59,8 @@ namespace fuckingSpaceInvaders
           
             CustomMessage custom = new CustomMessage();
             
-            custom.txtInputOutput.Visibility = Visibility.Hidden;
+            custom.txtName.Visibility = Visibility.Hidden;
+            custom.txtScore.Visibility = Visibility.Hidden;
             custom.btnSave.Content = "Yes";
             custom.btnClose.Content = "No";
             custom.Show();
@@ -149,10 +150,10 @@ namespace fuckingSpaceInvaders
                 if (cnt == 10) break;
                 val += $"{cnt + 1}. {myList[i].Key}\t-\t{myList[i].Value}\n";
                 cnt++;
-                MessageBox.Show(val);
+               
             }
 
-           
+            
             return val;
         }
 

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:fuckingSpaceInvaders"
         mc:Ignorable="d" Icon="PaintTank.png"
-        Title="CustomMessage" Height="169.853" Width="393.75" WindowStyle="None">
+        Title="CustomMessage" Height="218.926" Width="393.75" WindowStyle="None">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -13,7 +13,7 @@
                 <GradientStop Color="White"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <TextBox x:Name="txtInputOutput" HorizontalAlignment="Left" Height="104" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="366">
+        <TextBox x:Name="txtName" Height="140" Margin="10,10,192,0" TextWrapping="Wrap" VerticalAlignment="Top" BorderBrush="{x:Null}">
             <TextBox.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="1"/>
@@ -21,7 +21,7 @@
                 </LinearGradientBrush>
             </TextBox.Background>
         </TextBox>
-        <Button x:Name="btnClose" Content="Close" Margin="231,132,80,0" VerticalAlignment="Top" Click="btnClose_Click" Foreground="White">
+        <Button x:Name="btnClose" Content="Close" Margin="230,165,81,0" VerticalAlignment="Top" Click="btnClose_Click" Foreground="White">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="1"/>
@@ -29,7 +29,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="80,132,0,0" VerticalAlignment="Top" Width="75" Click="btnSave_Click" Foreground="White">
+        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="80,165,0,0" VerticalAlignment="Top" Width="75" Click="btnSave_Click" Foreground="White">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="1"/>
@@ -37,7 +37,15 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <TextBox x:Name="txtReturn" MouseDown="txtReturn_MouseDown" HorizontalAlignment="Left" Height="23" Margin="35,51,0,0" TextWrapping="Wrap" Text="This username already exists, would you like to use it?" VerticalAlignment="Top" Width="317"/>
+        <TextBox x:Name="txtScore" Height="140" Margin="190,10,10,0" TextWrapping="Wrap" VerticalAlignment="Top" BorderBrush="{x:Null}">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.865"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox x:Name="txtReturn" MouseDown="txtReturn_MouseDown" Height="23" Margin="35,62,34,0" TextWrapping="Wrap" Text="This username already exists, would you like to use it?" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

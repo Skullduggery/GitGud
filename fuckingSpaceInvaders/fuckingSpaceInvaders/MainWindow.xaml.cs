@@ -43,7 +43,16 @@ namespace fuckingSpaceInvaders
         {
             new BitmapImage(new Uri("pack://application:,,,/1.png")),
             new BitmapImage(new Uri("pack://application:,,,/2.png")),
-            new BitmapImage(new Uri("pack://application:,,,/3.png"))
+            new BitmapImage(new Uri("pack://application:,,,/3.png")),
+            new BitmapImage(new Uri("pack://application:,,,/4.png")),
+            new BitmapImage(new Uri("pack://application:,,,/5.png")),
+            new BitmapImage(new Uri("pack://application:,,,/6.png")),
+            new BitmapImage(new Uri("pack://application:,,,/7.png")),
+            new BitmapImage(new Uri("pack://application:,,,/8.png")),
+            new BitmapImage(new Uri("pack://application:,,,/9.png"))
+         //   new BitmapImage(new Uri("pack://application:,,,/10.png")),
+           // new BitmapImage(new Uri("pack://application:,,,/11.png")),
+           // new BitmapImage(new Uri("pack://application:,,,/12.png"))
         };
         int current = 0;
         DispatcherTimer time = new DispatcherTimer();
@@ -141,7 +150,8 @@ namespace fuckingSpaceInvaders
             custom.txtReturn.Visibility = Visibility.Hidden;
             //custom.txtInputOutput.Visibility = Visibility.Hidden;
             //custom.btnSave.Visibility = Visibility.Hidden;
-            custom.txtInputOutput.Text = "Thanks for playing\nWould you like to save your game?";
+            custom.txtName.Text = "Thanks for playing.";
+            custom.txtScore.Text = "Would you like to save your game?";
             custom.setter(true);
             custom.Show();
             

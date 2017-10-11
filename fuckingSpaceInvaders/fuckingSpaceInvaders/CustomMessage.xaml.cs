@@ -55,33 +55,41 @@ namespace fuckingSpaceInvaders
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
             ScoreThings score = new ScoreThings();
-            //string name = txtReturn.Text;
-            //if (name == null)
-            //{
-            //    MessageBox.Show("Please enter a name that is valid");
-            //    txtReturn.Text = "Enter name here";
-            //}
-            //else
-            //{
-            //    add(name);
-            //    score.answer = true;
-            //}
+            if (btnSave.Content == "Add")
+            {
+                string name = txtReturn.Text;
+                if (name == null)
+                {
+                    MessageBox.Show("Please enter a name that is valid");
+                    txtReturn.Text = "Enter name here";
+                }
+                else
+                {
+                    add(name);
+                    score.answer = true;
+                }
+            }
 
             score.ShowHighScores();
+            btnSave.Content = "Add";
+           
+
         }
 
         public void add(string name)
         {
-            string passing;
+            
             ScoreThings score = new ScoreThings();
             bool check = score.checkProfiles(name);
 
             if (!check)
             {
+                // name is not yet in the data base, add it.
+                // User the writer to add the name and the 
 
             }else
             {
-                btnSave.IsEnabled = false;
+               // name is in the data base, YES/NO buttons
             }
                 
 
