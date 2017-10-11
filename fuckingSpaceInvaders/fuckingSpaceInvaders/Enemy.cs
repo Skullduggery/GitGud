@@ -34,8 +34,8 @@ namespace fuckingSpaceInvaders
             double y = positions[current].Y;
             Canvas.SetLeft(enemy, x);
             Canvas.SetTop(enemy, y);
-            Canvas.SetLeft(explosion, x);
-            Canvas.SetTop(explosion, y);
+            Canvas.SetLeft(explosion, x -100);
+            Canvas.SetTop(explosion, y -100);
         }
     }
 }
