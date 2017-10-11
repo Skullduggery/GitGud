@@ -35,8 +35,12 @@ namespace fuckingSpaceInvaders
         Turtle tracer;
         Turtle enemyTracer;
         bool ourTurn = true;    //We go first
-        CustomMessage custom = new CustomMessage();
+        bool Hit = false;
         DispatcherTimer attacking = new DispatcherTimer();
+        Random rng = new Random();
+        double wind = 0;
+        //Custom message things
+        CustomMessage custom = new CustomMessage();
         //Stuff for the map here
         BitmapImage TempIcon = new BitmapImage(new Uri("pack://application:,,,/PaintTank.png"));
         BitmapImage[] environment = new BitmapImage[]
@@ -63,14 +67,12 @@ namespace fuckingSpaceInvaders
         DispatcherTimer time = new DispatcherTimer();
         //score things here
         ScoreThings profiles = new ScoreThings();
-        bool Hit;
         public MainWindow()
         {
            
             InitializeComponent();
             tracer = initTurtle(tracer);
              enemyTracer = initTurtle(enemyTracer);
-            //Jesus please find the exact location of the barrel of the gun and keep it there. 
             profiles.LoadProfiles();
             time.Tick += Time_Tick;
             DeathDestructionBattlegroundDoom.Background = new ImageBrush(environment[0]);//Sets the background to be the morning image (1.png)
@@ -80,8 +82,11 @@ namespace fuckingSpaceInvaders
             attacking.Interval = TimeSpan.FromMinutes(1);
             attacking.Tick += Attacking_Tick;
             attacking.IsEnabled = true;
-            debugsHere();           //@D.E.B.U.G
-        }
+            wind = rng.Next(-30, 30);
+            if (wind > 0)  label.Content = $"Wind:  {wind}km East"; 
+            else label.Content = $"Wind:  {-1 * wind}km West";  
+                debugsHere();           //@D.E.B.U.G
+            }
 
         //The idea is that the timer will check every minute whether it is the enemy's turn
         //If it is the enemy's turn, they will attack us.
@@ -163,20 +168,16 @@ namespace fuckingSpaceInvaders
            
         }
 
+        //This is to change the angle of the shot
         private void slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            Color k = tracer.ColorUnderTurtle;
-            label.Content = k;
             Tank.TurretUpdate((int)slider.Value, 70 ,205, tracer);
         }
 
+        //This is to draw the tracer of the bullet (handles the shooting tings)
         private void FireBtn_Click(object sender, RoutedEventArgs e)
         {
-            Color k = tracer.ColorUnderTurtle;
-            label.Content = k;
-            Bullet.UpdateBullet(tracer, 100);
-            
-            
+            Bullet.UpdateBullet(tracer, 100, label, wind,rng);
         }
     }
 }

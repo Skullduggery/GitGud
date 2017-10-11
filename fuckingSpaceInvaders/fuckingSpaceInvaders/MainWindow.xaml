@@ -25,7 +25,7 @@
         <Canvas x:Name="DeathDestructionBattlegroundDoom" Margin="10,10,10,0" Height="340" VerticalAlignment="Top">
             <Image x:Name="tankThing" Height="100" Canvas.Left="30" Canvas.Top="194" Width="100"/>
             <Image x:Name="shootingThing" Height="100" Canvas.Left="30" Canvas.Top="164" Width="100" Source="NewTank.png"/>
-            <Label x:Name="label" Content="Label" Canvas.Left="692" Height="61" Width="67" Canvas.Top="373"/>
+            <Label x:Name="label" Content="Label" Canvas.Left="672" Height="61" Width="104" Canvas.Top="374" Background="#00000000" Foreground="#FF06FF11"/>
             <Image x:Name="TankThingEnemy" Height="100" Canvas.Left="592" Canvas.Top="164" Width="100" Source="NewEnemy.png"/>
         </Canvas>
         <Slider x:Name="slider" HorizontalAlignment="Left" Margin="134,405,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.494,0.452" Maximum="0" Width="386" Height="22" ValueChanged="slider_ValueChanged" Minimum="-90">
