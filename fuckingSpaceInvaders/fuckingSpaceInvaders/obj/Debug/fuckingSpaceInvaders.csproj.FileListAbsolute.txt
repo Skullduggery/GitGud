@@ -114,3 +114,5 @@ C:\Users\Admin\Desktop\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debu
 C:\Users\Admin\Desktop\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.g.resources
 C:\Users\Admin\Desktop\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.Properties.Resources.resources
 C:\Users\Admin\Desktop\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.csproj.GenerateResource.Cache
+C:\Users\Timothy\Desktop\git\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\CustomMessage.g.cs
+C:\Users\Timothy\Desktop\git\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\CustomMessage.baml

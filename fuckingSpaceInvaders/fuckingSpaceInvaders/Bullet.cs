@@ -15,20 +15,32 @@ namespace fuckingSpaceInvaders
         {
 
         }
-        void UpdateBullet(Turtle Bull, int p) // p == power
+       public static void  UpdateBullet(Turtle Bull, int p) // p == power
         {
             Color k = Bull.ColorUnderTurtle;
-            while(k.G < 1 && k.B < 1 && k.R <1 || k.B < 44) //Checking the bullet is in the air
+
+
+
+            while (k.ToString() == "#FF3F61FE" || k.ToString() == "#FFFFFFFF" || k.ToString() == "#FF000000" || k.ToString() == "#FF00A2E8" || k.ToString() == "#FF121214" || k.ToString() == "#FF12121E" || k.ToString() == "#FF121232") //Checking the bullet is in the air
             {
-                while (Bull.Heading < 90 || (Bull.Heading > 180)  )
+                k = Bull.ColorUnderTurtle;
+                if (Bull.Heading < 90 || (Bull.Heading > 180))
                 {
                     Bull.Forward(p / 10);
                     Bull.Heading += 2;
                 }
-                Bull.Forward(p / 10);
+                else
+                {
+                    Bull.Forward(p / 10);
+                }
             }
+                
+                
+            }
+              
             
 
-        }
+             
+        
     }
 }

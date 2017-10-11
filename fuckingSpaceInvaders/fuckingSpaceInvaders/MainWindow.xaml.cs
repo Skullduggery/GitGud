@@ -61,9 +61,9 @@ namespace fuckingSpaceInvaders
         bool Hit;
         public MainWindow()
         {
-            
+           
             InitializeComponent();
-            tracer = initTurtle(tracer);
+            tracer = new Turtle(DeathDestructionBattlegroundDoom, Canvas.GetTop(shootingThing), Canvas.GetLeft(shootingThing));
             enemyTracer = initTurtle(enemyTracer);
             //Jesus please find the exact location of the barrel of the gun and keep it there. 
             profiles.LoadProfiles();
@@ -160,17 +160,20 @@ namespace fuckingSpaceInvaders
 
         private void slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            
-          //TurretUpdate used to be here I Broke it :(
-          //Fix it :D
+            Color k = tracer.ColorUnderTurtle;
+            label.Content = k;
+            Tank.TurretUpdate((int)slider.Value, Canvas.GetTop(shootingThing), Canvas.GetLeft(shootingThing), tracer);
         }
 
         private void FireBtn_Click(object sender, RoutedEventArgs e)
         {
-            //BulletUpdate goes here
-            if (tracer.Position.X > (Canvas.GetTop(tankThing)) && tracer.Position.Y > Canvas.GetLeft(tankThing)) 
+            Color k = tracer.ColorUnderTurtle;
+            label.Content = k;
+            Bullet.UpdateBullet(tracer, 100);
+            if (tracer.Position.X > (Canvas.GetTop(TankThingEnemy)) && tracer.Position.Y > Canvas.GetLeft(TankThingEnemy)) 
             {
                 Hit = true;
+                MessageBox.Show("HIT!");
             }
         }
     }
