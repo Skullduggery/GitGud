@@ -134,3 +134,20 @@ E:\GIT\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\MainWindow.bam
 E:\GIT\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.g.resources
 E:\GIT\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.Properties.Resources.resources
 E:\GIT\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.csproj.GenerateResource.Cache
+\\ict.ru.ac.za\DFS\UGHomes\G17S9109\My Documents\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\bin\Debug\fuckingSpaceInvaders.exe.config
+\\ict.ru.ac.za\DFS\UGHomes\G17S9109\My Documents\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.exe
+\\ict.ru.ac.za\DFS\UGHomes\G17S9109\My Documents\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.pdb
+\\ict.ru.ac.za\DFS\UGHomes\G17S9109\My Documents\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\bin\Debug\fuckingSpaceInvaders.exe
+\\ict.ru.ac.za\DFS\UGHomes\G17S9109\My Documents\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\bin\Debug\fuckingSpaceInvaders.pdb
+\\ict.ru.ac.za\DFS\UGHomes\G17S9109\My Documents\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\bin\Debug\ThinkLib.xml
+\\ict.ru.ac.za\DFS\UGHomes\G17S9109\My Documents\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.csprojResolveAssemblyReference.cache
+\\ict.ru.ac.za\DFS\UGHomes\G17S9109\My Documents\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\CustomMessage.g.cs
+\\ict.ru.ac.za\DFS\UGHomes\G17S9109\My Documents\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\MainWindow.g.cs
+\\ict.ru.ac.za\DFS\UGHomes\G17S9109\My Documents\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\App.g.cs
+\\ict.ru.ac.za\DFS\UGHomes\G17S9109\My Documents\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders_MarkupCompile.cache
+\\ict.ru.ac.za\DFS\UGHomes\G17S9109\My Documents\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders_MarkupCompile.lref
+\\ict.ru.ac.za\DFS\UGHomes\G17S9109\My Documents\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\CustomMessage.baml
+\\ict.ru.ac.za\DFS\UGHomes\G17S9109\My Documents\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\MainWindow.baml
+\\ict.ru.ac.za\DFS\UGHomes\G17S9109\My Documents\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.g.resources
+\\ict.ru.ac.za\DFS\UGHomes\G17S9109\My Documents\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.Properties.Resources.resources
+\\ict.ru.ac.za\DFS\UGHomes\G17S9109\My Documents\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.csproj.GenerateResource.Cache

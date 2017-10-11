@@ -50,31 +50,7 @@ namespace fuckingSpaceInvaders
             closing = thing;
         }
 
-        
-
-        private void btnSave_Click(object sender, RoutedEventArgs e)
-        {
-            ScoreThings score = new ScoreThings();
-            if (btnSave.Content == "Add")
-            {
-                string name = txtReturn.Text;
-                if (name == null)
-                {
-                    MessageBox.Show("Please enter a name that is valid");
-                    txtReturn.Text = "Enter name here";
-                }
-                else
-                {
-                    add(name);
-                    score.answer = true;
-                }
-            }
-
-            score.ShowHighScores();
-            btnSave.Content = "Add";
-           
-
-        }
+    
 
         public void add(string name)
         {
