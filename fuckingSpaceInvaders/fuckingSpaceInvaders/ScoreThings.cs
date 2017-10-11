@@ -140,21 +140,24 @@ namespace fuckingSpaceInvaders
         }
 
         //Shows the top 10 scores (uses the SortedList method)
-        public string ShowHighScores()
+        public void ShowHighScores()
         {
             string val = "";
             int cnt = 0;
             var myList = SortedList();
+            string[] names = new string[9];//that be 10 items
+            int[] scores = new int[9];
             for(int i = 0; i < myList.Count(); i++)
             {
                 if (cnt == 10) break;
-                val += $"{cnt + 1}. {myList[i].Key}\t-\t{myList[i].Value}\n";
+                //val += $"{cnt + 1}. {myList[i].Key}\t-\t{myList[i].Value}\n";
+                names[i] = myList[i].Key;
+                scores[i] = myList[i].Value;
                 cnt++;
-               
             }
 
             
-            return val;
+            //return val;
         }
 
         //Returns the sorted values from Profiles.  These values will be used to show the top 10 profiles (based on score)
