@@ -68,6 +68,9 @@ namespace fuckingSpaceInvaders
         DispatcherTimer time = new DispatcherTimer();
         //score things here
         ScoreThings profiles = new ScoreThings();
+        //tanks
+        Tank user = new Tank();
+        Enemy enemy = new Enemy();
         public MainWindow()
         {
            
@@ -84,8 +87,8 @@ namespace fuckingSpaceInvaders
             attacking.Tick += Attacking_Tick;
             attacking.IsEnabled = true;
             wind = rng.Next(-30, 30);
-            if (wind > 0)  label.Content = $"Wind:  {wind}km East"; 
-            else label.Content = $"Wind:  {-1 * wind}km West";  
+            if (wind > 0)  labelWind.Content = $"Wind:  {wind}km East"; 
+            else labelWind.Content = $"Wind:  {-1 * wind}km West";  
                 debugsHere();           //@D.E.B.U.G
             }
 
@@ -179,17 +182,23 @@ namespace fuckingSpaceInvaders
         //This is to draw the tracer of the bullet (handles the shooting tings)
         private void FireBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (Bullet.UpdateBullet(tracer, PowerSlider.Value,label,wind,rng))
+            if (Bullet.UpdateBullet(tracer, PowerSlider.Value, labelWind, wind, rng, TankThingEnemy))
             {
-                image.Visibility = Visibility.Visible;
+                splosion.Visibility = Visibility.Visible;
                 MessageBox.Show("Hit!");
+                splosion.Visibility = Visibility.Hidden;
+                tracer.Clear();
+                Tank.TurretUpdate((int)slider.Value, 70, 205, tracer);
+                enemy.move(TankThingEnemy, splosion);
             }
-                
-            else image.Visibility = Visibility.Hidden;
 
-            
-
-
+            else
+            {
+                splosion.Visibility = Visibility.Hidden;
+                labelHP.Content = $"HP [{user.Lives}]";
+                if (user.updateHP())
+                    this.Close();
+            }
         }
 
         private void PowerSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)

@@ -20,7 +20,7 @@ namespace fuckingSpaceInvaders
         {
 
         }
-        public static bool UpdateBullet(Turtle Bull, double p, Label txt, double wind, Random rng) // p == power
+        public static bool UpdateBullet(Turtle Bull, double p, Label txt, double wind, Random rng, Image enemy) // p == power
         {
             Color k = Bull.ColorUnderTurtle;
 
@@ -35,7 +35,7 @@ namespace fuckingSpaceInvaders
                     {
                         Bull.Forward(p / 10);
                         Bull.Heading += 2;
-                        if (Bull.Position.X > 592 && Bull.Position.Y > 164)
+                        if (Bull.Position.X > Canvas.GetLeft(enemy) && Bull.Position.Y > Canvas.GetTop(enemy))
                         {
                             return true;
                         }
@@ -43,7 +43,7 @@ namespace fuckingSpaceInvaders
                     else
                     {
                         Bull.Forward(p / 10);
-                        if (Bull.Position.X > 164 && Bull.Position.Y < 592)
+                        if (Bull.Position.X > Canvas.GetLeft(enemy) && Bull.Position.Y > Canvas.GetTop(enemy))
                         {
                             return true;
                         }
