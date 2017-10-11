@@ -59,6 +59,7 @@ namespace fuckingSpaceInvaders
             new BitmapImage(new Uri("pack://application:,,,/16.png"))
          
         };
+        
         int current = 0;
         DispatcherTimer time = new DispatcherTimer();
         //score things here
@@ -103,9 +104,11 @@ namespace fuckingSpaceInvaders
         //This method is used to initialize the turtles as well as set the colour of their brushes and hide them
         private Turtle initTurtle(Turtle x)
         {
-            x = new Turtle(DeathDestructionBattlegroundDoom, Canvas.GetTop(shootingThing), Canvas.GetLeft(shootingThing));
+            x = new Turtle(DeathDestructionBattlegroundDoom, 70, 205);
             x.Visible = false;
             x.LineBrush = Brushes.Red;
+            
+
             return x;
         }
 
@@ -174,9 +177,23 @@ namespace fuckingSpaceInvaders
         {
             Color k = tracer.ColorUnderTurtle;
             label.Content = k;
-            Bullet.UpdateBullet(tracer, 100);
+            //Bullet.UpdateBullet(tracer, PowerSlider.Value);
+            if (Bullet.UpdateBullet(tracer, PowerSlider.Value))
+            {
+                image.Visibility = Visibility.Visible;
+                MessageBox.Show("Hit!");
+            }
+                
+            else image.Visibility = Visibility.Hidden;
+
             
-            
+
+
+        }
+
+        private void PowerSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
         }
     }
 }
