@@ -23,7 +23,7 @@ namespace fuckingSpaceInvaders
         }
 
         //Adjusts the score in the profile if the user 
-      /*  public void updateScore()
+        public void updateScore()
         {
             int profileScore = Profiles[Username];
             if (Score > profileScore)
@@ -31,13 +31,8 @@ namespace fuckingSpaceInvaders
                 Profiles[Username] = Score;
                 WriteTings();
             }
-        }*/
-
-        //This gets called 
-        public void updateScore()
-        {
-            Score += 10;
         }
+
 
         //Used to check if current username is already in the list of profiles 
         public bool checkProfiles(string usr)

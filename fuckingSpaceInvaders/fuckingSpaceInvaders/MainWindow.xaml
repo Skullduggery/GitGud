@@ -27,7 +27,7 @@
             <Image x:Name="shootingThing" Height="100" Canvas.Left="30" Canvas.Top="164" Width="100" Source="NewTank.png"/>
             <Label x:Name="labelWind" Content="Label" Canvas.Left="661" Height="42" Width="104" Canvas.Top="391" Background="#00000000" Foreground="#FF06FF11"/>
             <Image x:Name="TankThingEnemy" Height="100" Canvas.Left="592" Canvas.Top="164" Width="100" Source="NewEnemy.png"/>
-            <Image x:Name="splosion" Height="200" Canvas.Left="592" Canvas.Top="164" Width="150" RenderTransformOrigin="0.88,0.395" Source="exp.png" Stretch="Fill" Visibility="Hidden"/>
+            <Image x:Name="splosion" Height="300" Canvas.Left="492" Canvas.Top="64" Width="300" RenderTransformOrigin="0.88,0.395" Source="exp.png" Stretch="Fill" Visibility="Hidden"/>
         </Canvas>
         <Slider x:Name="slider" HorizontalAlignment="Left" Margin="134,405,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.494,0.452" Maximum="0" Width="386" Height="22" ValueChanged="slider_ValueChanged" Minimum="-90">
             <Slider.Foreground>
@@ -84,6 +84,5 @@
         <Label x:Name="labelHP" Content="HP [100]" HorizontalAlignment="Left" Margin="584,374,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.342,0.692" Foreground="#FFFD0C0C"/>
         <Label x:Name="Power" Content="Power" HorizontalAlignment="Left" Margin="71,374,0,0" VerticalAlignment="Top" Foreground="#FFFBFBFB"/>
         <Label x:Name="Angle" Content="Angle" HorizontalAlignment="Left" Margin="71,405,0,0" VerticalAlignment="Top" Foreground="White"/>
-
     </Grid>
 </Window>

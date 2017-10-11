@@ -160,7 +160,7 @@ namespace fuckingSpaceInvaders
              * if we do implememt this it will be a limited feature 
              * (working only for the last person that quit midway through a game) 
              */
-            //profiles.updateScore();
+            profiles.updateScore();
             //MessageBox.Show("Tanks for playing");//<-- 
             custom.txtReturn.Visibility = Visibility.Hidden;
             //custom.txtInputOutput.Visibility = Visibility.Hidden;

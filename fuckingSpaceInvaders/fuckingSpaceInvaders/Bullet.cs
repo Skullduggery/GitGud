@@ -35,7 +35,7 @@ namespace fuckingSpaceInvaders
                     {
                         Bull.Forward(p / 10);
                         Bull.Heading += 2;
-                        if (Bull.Position.X > Canvas.GetLeft(enemy) && Bull.Position.Y > Canvas.GetTop(enemy))
+                        if (Bull.Position.X > Canvas.GetLeft(enemy) + 10 && Bull.Position.Y > Canvas.GetTop(enemy) + 50)
                         {
                             return true;
                         }
@@ -43,7 +43,7 @@ namespace fuckingSpaceInvaders
                     else
                     {
                         Bull.Forward(p / 10);
-                        if (Bull.Position.X > Canvas.GetLeft(enemy) && Bull.Position.Y > Canvas.GetTop(enemy))
+                        if (Bull.Position.X > Canvas.GetLeft(enemy) +10 && Bull.Position.Y > Canvas.GetTop(enemy)+50)
                         {
                             return true;
                         }
