@@ -32,6 +32,11 @@ namespace fuckingSpaceInvaders
                 else
                 {
                     Bull.Forward(p / 10);
+                    if (Bull.Position.X > 164 && Bull.Position.Y < 592)
+                    {
+                        
+                        MessageBox.Show("HIT!");
+                    }
                 }
             }
                 

@@ -68,8 +68,8 @@ namespace fuckingSpaceInvaders
         {
            
             InitializeComponent();
-            tracer = new Turtle(DeathDestructionBattlegroundDoom, Canvas.GetTop(shootingThing), Canvas.GetLeft(shootingThing));
-            enemyTracer = initTurtle(enemyTracer);
+            tracer = initTurtle(tracer);
+             enemyTracer = initTurtle(enemyTracer);
             //Jesus please find the exact location of the barrel of the gun and keep it there. 
             profiles.LoadProfiles();
             time.Tick += Time_Tick;
@@ -103,7 +103,7 @@ namespace fuckingSpaceInvaders
         //This method is used to initialize the turtles as well as set the colour of their brushes and hide them
         private Turtle initTurtle(Turtle x)
         {
-            x = new Turtle(DeathDestructionBattlegroundDoom);
+            x = new Turtle(DeathDestructionBattlegroundDoom, Canvas.GetTop(shootingThing), Canvas.GetLeft(shootingThing));
             x.Visible = false;
             x.LineBrush = Brushes.Red;
             return x;
@@ -167,7 +167,7 @@ namespace fuckingSpaceInvaders
         {
             Color k = tracer.ColorUnderTurtle;
             label.Content = k;
-            Tank.TurretUpdate((int)slider.Value, Canvas.GetTop(shootingThing), Canvas.GetLeft(shootingThing), tracer);
+            Tank.TurretUpdate((int)slider.Value, 70 ,205, tracer);
         }
 
         private void FireBtn_Click(object sender, RoutedEventArgs e)
@@ -175,11 +175,8 @@ namespace fuckingSpaceInvaders
             Color k = tracer.ColorUnderTurtle;
             label.Content = k;
             Bullet.UpdateBullet(tracer, 100);
-            if (tracer.Position.X > (Canvas.GetTop(TankThingEnemy)) && tracer.Position.Y > Canvas.GetLeft(TankThingEnemy)) 
-            {
-                Hit = true;
-                MessageBox.Show("HIT!");
-            }
+            
+            
         }
     }
 }

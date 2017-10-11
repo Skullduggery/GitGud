@@ -18,7 +18,7 @@ namespace fuckingSpaceInvaders
             Tur.Clear();
             Tur.Heading = h;
             Tur.BrushDown = true;
-            Tur.Forward(5);
+            Tur.Forward(10);
         }
     }
 }
