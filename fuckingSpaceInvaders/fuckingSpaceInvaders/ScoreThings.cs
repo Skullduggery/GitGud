@@ -23,7 +23,7 @@ namespace fuckingSpaceInvaders
         }
 
         //Adjusts the score in the profile if the user 
-      /*  public void updateScore()
+        public void updateScore()
         {
             int profileScore = Profiles[Username];
             if (Score > profileScore)
@@ -31,7 +31,8 @@ namespace fuckingSpaceInvaders
                 Profiles[Username] = Score;
                 WriteTings();
             }
-        }*/
+        }
+
 
         //Used to check if current username is already in the list of profiles 
         public bool checkProfiles(string usr)
@@ -141,8 +142,12 @@ namespace fuckingSpaceInvaders
         //Shows the top 10 scores (uses the SortedList method)
         public string ShowHighScores()
         {
+<<<<<<< HEAD
             CustomMessage custom = new CustomMessage();
             string val = "";
+=======
+            //string val = "";
+>>>>>>> d63a7e6a1e1b31228114c0b57f3809f0a2053335
             int cnt = 0;
             var myList = SortedList();
             List<string> names = new List<string>();//that be 10 items
@@ -156,7 +161,12 @@ namespace fuckingSpaceInvaders
                 cnt++;
                          
             }
+<<<<<<< HEAD
             return val;
+=======
+
+            //return val;
+>>>>>>> d63a7e6a1e1b31228114c0b57f3809f0a2053335
         }
 
         //Returns the sorted values from Profiles.  These values will be used to show the top 10 profiles (based on score)
