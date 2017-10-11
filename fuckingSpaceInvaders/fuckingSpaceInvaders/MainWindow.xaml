@@ -27,6 +27,7 @@
             <Image x:Name="shootingThing" Height="100" Canvas.Left="30" Canvas.Top="164" Width="100" Source="NewTank.png"/>
             <Label x:Name="label" Content="Label" Canvas.Left="672" Height="61" Width="104" Canvas.Top="374" Background="#00000000" Foreground="#FF06FF11"/>
             <Image x:Name="TankThingEnemy" Height="100" Canvas.Left="592" Canvas.Top="164" Width="100" Source="NewEnemy.png"/>
+            <Image x:Name="image" Height="149" Canvas.Left="570" Canvas.Top="145" Width="142" RenderTransformOrigin="0.88,0.395" Source="exp.png" Stretch="Fill" Visibility="Hidden"/>
         </Canvas>
         <Slider x:Name="slider" HorizontalAlignment="Left" Margin="134,405,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.494,0.452" Maximum="0" Width="386" Height="22" ValueChanged="slider_ValueChanged" Minimum="-90">
             <Slider.Foreground>
@@ -58,6 +59,28 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        <Slider x:Name="PowerSlider" HorizontalAlignment="Left" Margin="134,374,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.494,0.452" Maximum="150" Width="386" Height="22" ValueChanged="PowerSlider_ValueChanged" Minimum="50" >
+            <Slider.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0.29"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Slider.Foreground>
+            <Slider.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </Slider.Background>
+            <Slider.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.285"/>
+                    <TranslateTransform X="-0.021" Y="0.045"/>
+                </TransformGroup>
+            </Slider.RenderTransform>
+        </Slider>
 
     </Grid>
 </Window>
