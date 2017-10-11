@@ -9,6 +9,6 @@ namespace fuckingSpaceInvaders
     
     class Enemy:Tank //it might not inherit, don't know yet... 
     {
-        
+        //Enemies suck, so they only have one health
     }
 }

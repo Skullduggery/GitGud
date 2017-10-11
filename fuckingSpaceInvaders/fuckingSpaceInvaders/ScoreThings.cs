@@ -33,6 +33,12 @@ namespace fuckingSpaceInvaders
             }
         }*/
 
+        //This gets called 
+        public void updateScore()
+        {
+            Score += 10;
+        }
+
         //Used to check if current username is already in the list of profiles 
         public bool checkProfiles(string usr)
         {
@@ -142,7 +148,7 @@ namespace fuckingSpaceInvaders
         //Shows the top 10 scores (uses the SortedList method)
         public void ShowHighScores()
         {
-            string val = "";
+            //string val = "";
             int cnt = 0;
             var myList = SortedList();
             string[] names = new string[9];//that be 10 items
@@ -156,7 +162,6 @@ namespace fuckingSpaceInvaders
                 cnt++;
             }
 
-            
             //return val;
         }
 

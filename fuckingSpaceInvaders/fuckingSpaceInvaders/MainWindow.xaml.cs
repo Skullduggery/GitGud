@@ -72,7 +72,7 @@ namespace fuckingSpaceInvaders
            
             InitializeComponent();
             tracer = initTurtle(tracer);
-             enemyTracer = initTurtle(enemyTracer);
+            enemyTracer = initTurtle(enemyTracer);
             profiles.LoadProfiles();
             time.Tick += Time_Tick;
             DeathDestructionBattlegroundDoom.Background = new ImageBrush(environment[0]);//Sets the background to be the morning image (1.png)
@@ -148,7 +148,6 @@ namespace fuckingSpaceInvaders
             //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$STAPLETON DO THIS$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
             //Make this message box look FABULOUS
-            //Nice icon and stuff too
             /*
              * Can have a save feature whereby if the user quits while playing, they can resume where the left off
              * will probably not have time to do this, but it is an idea
