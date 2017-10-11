@@ -61,15 +61,14 @@ namespace fuckingSpaceInvaders
             
             custom.txtName.Visibility = Visibility.Hidden;
             custom.txtScore.Visibility = Visibility.Hidden;
-            custom.btnSave.Content = "Yes";
-            custom.btnClose.Content = "No";
+            
+            
             custom.Show();
             
            
             if (checkProfiles(usr) && !answer)
             {
-                //if user already exists, but the answer to the messageBox quistion is "no" then ask them to enter a new username
-                custom.btnSave.Content = "Add";
+                
                 
                 custom.Show();
                 Username = custom.txtReturn.Text;
@@ -142,18 +141,21 @@ namespace fuckingSpaceInvaders
         //Shows the top 10 scores (uses the SortedList method)
         public string ShowHighScores()
         {
+            CustomMessage custom = new CustomMessage();
             string val = "";
             int cnt = 0;
             var myList = SortedList();
+            List<string> names = new List<string>();//that be 10 items
+            List<int> scores = new List<int>();
             for(int i = 0; i < myList.Count(); i++)
             {
                 if (cnt == 10) break;
                 val += $"{cnt + 1}. {myList[i].Key}\t-\t{myList[i].Value}\n";
+                //names.Add(myList[i].Key);
+                //scores.Add(myList[i].Value);
                 cnt++;
-               
+                         
             }
-
-            
             return val;
         }
 

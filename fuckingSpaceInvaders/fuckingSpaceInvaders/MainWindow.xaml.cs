@@ -67,12 +67,18 @@ namespace fuckingSpaceInvaders
         DispatcherTimer time = new DispatcherTimer();
         //score things here
         ScoreThings profiles = new ScoreThings();
+       
         public MainWindow()
         {
            
             InitializeComponent();
+            this.Hide();
+            custom.Show();
+            custom.Focus();
+            
+
             tracer = initTurtle(tracer);
-             enemyTracer = initTurtle(enemyTracer);
+            enemyTracer = initTurtle(enemyTracer);
             profiles.LoadProfiles();
             time.Tick += Time_Tick;
             DeathDestructionBattlegroundDoom.Background = new ImageBrush(environment[0]);//Sets the background to be the morning image (1.png)
@@ -160,11 +166,13 @@ namespace fuckingSpaceInvaders
             custom.txtReturn.Visibility = Visibility.Hidden;
             //custom.txtInputOutput.Visibility = Visibility.Hidden;
             //custom.btnSave.Visibility = Visibility.Hidden;
-            custom.txtName.Text = "Thanks for playing.";
-            custom.txtScore.Text = "Would you like to save your game?";
-            custom.setter(true);
-            custom.Show();
             
+            custom.setter(true);
+            custom.display();
+            //profiles.ShowHighScores();
+  
+            custom.Show();
+           
            
         }
 
