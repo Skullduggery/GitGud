@@ -29,3 +29,6 @@ I:\GIT\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\MainWindow.bam
 I:\GIT\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.g.resources
 I:\GIT\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.Properties.Resources.resources
 I:\GIT\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.csproj.GenerateResource.Cache
+E:\GIT\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\bin\Debug\fuckingSpaceInvaders.exe.config
+E:\GIT\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.exe
+E:\GIT\GitGud\fuckingSpaceInvaders\fuckingSpaceInvaders\obj\Debug\fuckingSpaceInvaders.pdb
