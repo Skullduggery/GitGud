@@ -10,19 +10,20 @@ namespace fuckingSpaceInvaders
 {
     class ScoreThings
     {
-        private string path = "..\\..\\..\\Profiles.txt";
-        //Make an icon for the main window (window that shows when you click "Start" -- ya stupid bitch)
+        private string path = "..\\..\\..\\Profiles.csv";
+        //Make an icon for the main window (window that shows when you click "Start")
         public Dictionary<string, int> Profiles = new Dictionary<string, int>();
         public string Username { get; private set; }
-        public int Score { get; set; } //need a way to increase this score...
+        public int Score { get; set; } //need a way to increase thiscore...
+        public bool answer = false;
 
         public ScoreThings()
-        {
+        {        
             //this is an empty constructor, duh...
         }
 
         //Adjusts the score in the profile if the user 
-        public void updateScore()
+      /*  public void updateScore()
         {
             int profileScore = Profiles[Username];
             if (Score > profileScore)
@@ -30,7 +31,7 @@ namespace fuckingSpaceInvaders
                 Profiles[Username] = Score;
                 WriteTings();
             }
-        }
+        }*/
 
         //Used to check if current username is already in the list of profiles 
         public bool checkProfiles(string usr)
@@ -55,10 +56,25 @@ namespace fuckingSpaceInvaders
             //Have a messageBox that returns a boolean [assign this to the Answer variable
             //This messageBox will read:  "This username already exists, would you like to use it"
             //Give the user a "yes" (true) and a "no" (false) option
-            bool answer = false;
+          
+            CustomMessage custom = new CustomMessage();
+            
+            custom.txtName.Visibility = Visibility.Hidden;
+            custom.txtScore.Visibility = Visibility.Hidden;
+            custom.btnSave.Content = "Yes";
+            custom.btnClose.Content = "No";
+            custom.Show();
+            
+           
             if (checkProfiles(usr) && !answer)
             {
                 //if user already exists, but the answer to the messageBox quistion is "no" then ask them to enter a new username
+                custom.btnSave.Content = "Add";
+                
+                custom.Show();
+                Username = custom.txtReturn.Text;
+               
+                
             }
 
             if (!checkProfiles(usr))
@@ -85,8 +101,10 @@ namespace fuckingSpaceInvaders
             }
             catch(IOException ex)
             {
-                //make more specific catches
-            }finally
+                //make more specific catches/messages
+                MessageBox.Show("An IO error occured\n\n" + ex.ToString());
+            }
+            finally
             {
                 sw.Close();
             }
@@ -114,6 +132,7 @@ namespace fuckingSpaceInvaders
             catch (IOException ex)
             {
                 //show specific error message here
+                MessageBox.Show("An IO error occured\n\n" + ex.ToString());
             }finally
             {
                 sr.Close();
@@ -131,7 +150,10 @@ namespace fuckingSpaceInvaders
                 if (cnt == 10) break;
                 val += $"{cnt + 1}. {myList[i].Key}\t-\t{myList[i].Value}\n";
                 cnt++;
+               
             }
+
+            
             return val;
         }
 
