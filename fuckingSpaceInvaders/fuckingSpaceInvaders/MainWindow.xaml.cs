@@ -49,10 +49,15 @@ namespace fuckingSpaceInvaders
             new BitmapImage(new Uri("pack://application:,,,/6.png")),
             new BitmapImage(new Uri("pack://application:,,,/7.png")),
             new BitmapImage(new Uri("pack://application:,,,/8.png")),
-            new BitmapImage(new Uri("pack://application:,,,/9.png"))
-         //   new BitmapImage(new Uri("pack://application:,,,/10.png")),
-           // new BitmapImage(new Uri("pack://application:,,,/11.png")),
-           // new BitmapImage(new Uri("pack://application:,,,/12.png"))
+            new BitmapImage(new Uri("pack://application:,,,/9.png")),
+            new BitmapImage(new Uri("pack://application:,,,/10.png")),
+            new BitmapImage(new Uri("pack://application:,,,/11.png")),
+            new BitmapImage(new Uri("pack://application:,,,/12.png")),
+            new BitmapImage(new Uri("pack://application:,,,/13.png")),
+            new BitmapImage(new Uri("pack://application:,,,/14.png")),
+            new BitmapImage(new Uri("pack://application:,,,/15.png")),
+            new BitmapImage(new Uri("pack://application:,,,/16.png"))
+         
         };
         int current = 0;
         DispatcherTimer time = new DispatcherTimer();
