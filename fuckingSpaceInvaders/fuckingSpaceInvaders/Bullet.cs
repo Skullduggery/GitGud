@@ -25,7 +25,7 @@ namespace fuckingSpaceInvaders
             wind = rng.Next(-30,30);
             if (wind > 0) txt.Content = $"Wind:  {wind}km East";
             else txt.Content = $"Wind:  {-1 * wind}km West";
-            while (k.ToString() == "#FF3F61FE" || k.ToString() == "#FFFFFFFF" || k.ToString() == "#FF000000" || k.ToString() == "#FF00A2E8" || k.ToString() == "#FF121214" || k.ToString() == "#FF12121E" || k.ToString() == "#FF121232") //Checking the bullet is in the air
+            while (k.ToString() == "#FF3F61FE" || k.ToString() == "#FFFFFFFF" || k.ToString() == "#FF000000" || k.ToString() == "#FF00A2E8" || k.ToString() == #F"F121214" || k.ToString() == "#FF12121E" || k.ToString() == "#FF121232") //Checking the bullet is in the air
             {//beautiful
                 k = Bull.ColorUnderTurtle;
                 if (Bull.Heading < 90 || (Bull.Heading > 180))
