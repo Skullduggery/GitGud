@@ -21,6 +21,17 @@ Used a canvas for the background so that we could make use of a turtle to trace 
 Sorting of the dictionary to display the top 10 player's gave some issues, but upon some trial and error, got it to work.
 </Matthew>
 
+
+<Stapleton>
+//Your stuff here
+</Stapleton>
+
+<Berry>
+//Your stuff here
+//Speak about bullet class and tank class (and anything else you want to add)
+//Mention the physics stuff you wanted to do and what we actually ended up doing
+</Berry>
+
 <Conclusion>
 Some cool features were left out due to time constraints and a few bugs persisted because of a lack of time to fix them.
 //Add more here
