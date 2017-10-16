@@ -1,0 +1,16 @@
+@@@@Don't delete shit@@@
+<Matthew>
+Main issue that arises is that we didn't finish the user sign in
+which was intended for use with the score dictionary which keeps track of players high scores
+and will swap out old high scores with new ones.  
+
+Because the sign in was incomplete the key value for the score
+is null and thus there is a ctd when closing the program (as a null value is used as the key)
+The intention was to save the new high score to a csv file, so that we could see the top 10 players.
+
+Other issue:  forgot to increment score upon destorying an enemy tank.
+
+Used a canvas for the background so that we could make use of a turtle to trace the player's shot.
+
+Sorting of the dictionary to display the top 10 player's gave some issues, but upon some trial and error, got it to work.
+</Matthew>
