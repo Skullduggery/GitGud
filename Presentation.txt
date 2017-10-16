@@ -1,4 +1,10 @@
 @@@@Don't delete shit@@@
+<Introduction>
+//Put more stuff here
+A tank game whereby you lose a life every time you miss.  Power slider to adjust the power of the shot and an angle slider to adjsuts the angle of the shot.  
+Wind affects power of shot and enemy dies upon being hit and a new one will spawn.  
+</Introduction>
+
 <Matthew>
 Main issue that arises is that we didn't finish the user sign in
 which was intended for use with the score dictionary which keeps track of players high scores
@@ -14,3 +20,8 @@ Used a canvas for the background so that we could make use of a turtle to trace 
 
 Sorting of the dictionary to display the top 10 player's gave some issues, but upon some trial and error, got it to work.
 </Matthew>
+
+<Conclusion>
+Some cool features were left out due to time constraints and a few bugs persisted because of a lack of time to fix them.
+//Add more here
+</Conclusion>
